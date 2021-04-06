@@ -30,3 +30,30 @@ menu.addEventListener(
   },
   true
 );
+
+menu.addEventListener(
+  "blur",
+  (event) => {
+    // Check if the target link is an indirect child of .menu_list
+    const targetIsIn = event.relatedTarget.closest(".menu_list");
+
+    if (
+      document.documentElement.classList.contains("has-open-menu") &&
+      !targetIsIn
+    ) {
+      document.documentElement.classList.remove("has-open-menu");
+    }
+  },
+  true
+);
+
+document.addEventListener("keydown", (event) => {
+  const escapeKey = 27;
+
+  if (
+    event.keyCode === escapeKey &&
+    document.documentElement.classList.contains("has-open-menu")
+  ) {
+    document.documentElement.classList.remove("has-open-menu");
+  }
+});
