@@ -16,24 +16,34 @@ html {
 .container {
   max-width: 60rem;
   margin: 0 auto;
-  min-height: 100vh;
   padding: 1rem;
 }
 
 .main__image-container {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
   padding: 1rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/wembley-crop.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
 }
 .main__image {
   max-width: 100%;
 }
 
-.main__callout h2 {
-  color: #000;
+.main h1 {
+  color: #fff;
   font-size: 4rem;
   text-transform: uppercase;
   margin: 0;
+  border-bottom: 1px solid #be1522;
 }
-.main__callout p {
+.main__text p {
   color: #000;
   font-size: 1rem;
 }
@@ -42,6 +52,9 @@ html {
   background-color: #000;
   margin-top: 3rem;
   padding: 1rem 3rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 .footer__container {
   margin: 0 auto;
@@ -81,12 +94,20 @@ html {
 }
 
 @media screen and (max-width: 57rem) {
-  .main__callout h2 {
+  .container {
+    min-height: 100vh;
+  }
+  .main__image-container {
+    margin: 1.5rem 0;
+    height: 250px;
+  }
+  .main h1 {
     font-size: 2.6rem;
     padding: 0.5rem 0;
   }
   .footer {
     padding: 1rem;
+    position: unset;
   }
   .footer__container {
     flex-direction: column;
