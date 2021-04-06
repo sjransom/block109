@@ -99,7 +99,7 @@ html {
   }
   .main__image-container {
     margin: 1.5rem 0;
-    height: 250px;
+    min-height: 250px;
   }
   .main h1 {
     font-size: 2.6rem;
