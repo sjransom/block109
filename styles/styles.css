@@ -46,6 +46,7 @@ html {
 .footer__container {
   margin: 0 auto;
   max-width: 60rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -74,15 +75,16 @@ html {
   .footer {
     padding: 1rem;
   }
+  .footer__container {
+    flex-direction: column;
+    padding: 0;
+  }
   .footer__container h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
   .footer__container p {
     margin-top: 0.5rem;
-  }
-  .footer__container {
-    flex-direction: column;
   }
   .footer__images {
     justify-content: flex-start;
