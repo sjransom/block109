@@ -1,0 +1,169 @@
+.menu_button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.header {
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.header .logo img {
+  margin-right: 1rem;
+  width: 280px;
+}
+.header a {
+  border-bottom: none;
+  color: #333;
+  position: relative;
+  padding: 0.5rem 0 0.25rem;
+  font-weight: 700;
+}
+
+.menu::before {
+  content: "";
+  position: fixed;
+  z-index: 1;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease-out;
+}
+
+.menu_list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 20rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+  transition: 0.4s;
+  padding-top: 60px;
+  visibility: hidden;
+  transform: translateX(100%);
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+.menu_list_inner {
+  list-style: none;
+  display: flex;
+  flex-direction: inherit;
+}
+
+.has-open-menu .menu::before {
+  visibility: visible;
+  opacity: 1;
+}
+.has-open-menu .menu_list {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.menu_button--close {
+  position: absolute;
+  top: 1rem;
+  right: 1.75rem;
+  font-size: 2.5rem;
+}
+.menu_button--open {
+  font-size: 2rem;
+}
+
+.menu_item {
+  padding: 0.7rem 0;
+}
+
+.menu a {
+  margin: 0 0.75rem;
+  border-bottom: 5px solid transparent;
+  transition: border-bottom-color 0.3s ease-out;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.menu a[aria-current],
+.menu a:hover {
+  border-bottom-color: #be1522;
+}
+
+@media screen and (min-width: 56rem) {
+  .header {
+    padding: 0;
+    margin: 1rem auto;
+    font-size: 1.15rem;
+  }
+  .header .logo {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .menu_list {
+    max-width: 100%;
+    height: auto;
+    transform: translateX(0);
+    visibility: visible;
+    position: static;
+    background-color: transparent;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 0;
+  }
+
+  .has-open-menu .menu::before {
+    display: none;
+  }
+  .has-open-menu .menu_list {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .menu_button {
+    display: none;
+  }
+
+  .menu a {
+    margin: 0 1.5rem;
+  }
+
+  .header {
+    padding: 0;
+    margin: 1rem auto;
+    font-size: 1.15rem;
+  }
+  .header .logo {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .header .logo img {
+    width: 250px;
+  }
+}
