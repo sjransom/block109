@@ -58,6 +58,15 @@ html {
   color: #fff;
   font-size: 0.8rem;
 }
+.footer__email {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer__email .footer__image {
+  margin-right: 1rem;
+}
 .footer__images {
   display: flex;
   justify-content: space-between;
