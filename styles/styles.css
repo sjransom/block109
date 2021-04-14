@@ -123,6 +123,13 @@ body {
   color: #be1522;
 }
 
+.privacy h4 {
+  font-size: 1rem;
+}
+.privacy p {
+  font-size: 0.6rem;
+}
+
 @media screen and (max-width: 57rem) {
   .iframe-container {
     padding-top: 150%;
