@@ -46,7 +46,6 @@ body {
   margin-top: 1.5rem;
   margin-bottom: 3rem;
   padding: 1rem 0;
-
   background-position: center;
   background-size: cover;
   display: flex;
@@ -138,6 +137,24 @@ body {
   font-size: 0.6rem;
 }
 
+.callout {
+  width: 100%;
+  padding: 5px 0;
+  background-color: #be1522;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.callout p {
+  font-size: 0.8rem;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.callout a {
+  color: #fff;
+}
+
 @media screen and (max-width: 57rem) {
   .iframe-container {
     padding-top: 150%;
@@ -158,7 +175,6 @@ body {
   }
   .footer {
     padding: 1rem;
-    position: unset;
   }
   .footer__container {
     flex-direction: column;
@@ -176,5 +192,8 @@ body {
   }
   .footer__image {
     margin-right: 1rem;
+  }
+  .callout {
+    margin: 1rem 0;
   }
 }
