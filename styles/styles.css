@@ -63,7 +63,7 @@ body {
     url("../assets/wembley-2.jpg");
 }
 .wembeerly {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
     url("../assets/wembley-3.jpg");
 }
 
@@ -137,24 +137,6 @@ body {
   font-size: 0.6rem;
 }
 
-.callout {
-  width: 100%;
-  padding: 5px 0;
-  background-color: #be1522;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.callout p {
-  font-size: 0.8rem;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}
-.callout a {
-  color: #fff;
-}
-
 @media screen and (max-width: 57rem) {
   .iframe-container {
     padding-top: 150%;
@@ -192,8 +174,5 @@ body {
   }
   .footer__image {
     margin-right: 1rem;
-  }
-  .callout {
-    margin: 1rem 0;
   }
 }
