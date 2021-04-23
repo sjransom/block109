@@ -70,6 +70,9 @@ body {
 .main__text {
   width: 100%;
 }
+.main__text a {
+  color: #be1522;
+}
 
 .main__image {
   max-width: 100%;
@@ -89,6 +92,24 @@ body {
 .main__text p {
   color: #000;
   font-size: 1rem;
+}
+
+p.smaller {
+  font-size: 0.75rem;
+}
+
+.buy-now {
+  display: flex;
+}
+.buy-now > div {
+  padding-left: 1.5rem;
+  align-self: center;
+}
+.buy-now img {
+  width: 185px;
+}
+.buy-now a {
+  color: #000;
 }
 
 .footer {
@@ -162,6 +183,15 @@ body {
   }
   .main h1.smaller {
     font-size: 2.2rem;
+  }
+  .buy-now {
+    flex-direction: column;
+  }
+  .buy-now > div {
+    padding-left: 0;
+  }
+  .buy-now img {
+    width: auto;
   }
   .footer {
     padding: 1rem;
