@@ -19,6 +19,13 @@ body {
   height: 100vh;
 }
 
+.desktop-only {
+  display: block;
+}
+.mobile-only {
+  display: none;
+}
+
 .iframe-container {
   position: relative;
   width: 100%;
@@ -108,8 +115,9 @@ p.smaller {
 .buy-now img {
   width: 185px;
 }
-.buy-now a {
-  color: #000;
+
+.alt-link {
+  color: #000 !important;
 }
 
 .footer {
@@ -163,6 +171,12 @@ p.smaller {
 }
 
 @media screen and (max-width: 57rem) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
   .iframe-container {
     padding-top: 150%;
   }
