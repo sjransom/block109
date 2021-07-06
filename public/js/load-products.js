@@ -10,7 +10,7 @@ function createProductFromTemplate(item) {
   product.querySelector('.price').innerText = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: item.currency,
-  }).format((item.amount / 100).toFixed(2))
+  }).format((item.amountWithoutDelivery / 100).toFixed(2))
 
   const img = product.querySelector('img')
   img.src = item.image

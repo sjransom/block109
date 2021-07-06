@@ -4,7 +4,8 @@
     "name": "Wembeerly IPA x12",
     "description": "12 bottles",
     "image": "https://i.imgur.com/w8ejtAFm.jpg",
-    "amount": 2500,
+    "amount": 2999,
+    "amountWithoutDelivery": 2500,
     "currency": "GBP"
   },
   {
@@ -12,7 +13,8 @@
     "name": "Wembeerly IPA x24",
     "description": "24 bottles",
     "image": "https://i.imgur.com/VoPQcQdm.jpg",
-    "amount": 4500,
+    "amount": 4999,
+    "amountWithoutDelivery": 4500,
     "currency": "GBP"
   }
 ]
