@@ -46,7 +46,7 @@
           <h1 class="page">Wembeerly <span class="block__109">IPA</span></h1>
           <p class="mobile-only">
             <strong>
-              <span class="block__109">Available <a class="alt-link" href="https://www.portobellobrewing.com/shop/p/wembeerly-ipa" target="_blank">here</a> to buy now!</span>
+              <span class="block__109">Available <a class="alt-link" href="#linkTo">here</a> to buy now!</span>
             </strong>
           </p>
           <p>To celebrate Block 109’s growth, we’ve decided to brew our own beer. But in our typical unique style, we chose to create a drink with a difference.</p>
@@ -56,24 +56,32 @@
           <p>Every time a football fan buys a bottle of Wembeerly IPA they’ll be donating to grassroots causes such as <a href="https://www.grassrootsforgood.com" target="_blank">Grassroots For Good</a>, a community network started by Hackney Wick FC that champions the work of socially conscious grassroots football clubs tackling inequality and lack of investment.</p>
           <a href="https://www.grassrootsforgood.com" target="_blank"><img width="240" src="assets/grassroots.png" /></a>
           
-          <h4>Portobello Brewing</h4>
+          <h4 id="linkTo">Portobello Brewing</h4>
           <p>To make the project a reality, Block 109 pooled the resources of its members and teamed up with the master brewers at Portobello Brewing Company, who turned our football dreams into a hoppy reality.</p>
 
-          <div class="buy-now">
-            <img alt="wembeerly bottle" src="assets/bottles.jpg">
-            <div>
-              <p>
-                <strong>
-                  <span class="block__109">Available <a class="alt-link" href="https://www.portobellobrewing.com/shop/p/wembeerly-ipa" target="_blank">here</a> to buy now!</span>
-                </strong>
-              </p>
-              <p class="smaller">
-                <strong>Malts:</strong> Wembley Mix Rye Grass, Planet Pale, Wheat Malt, Caramalt, Amber<br />
-                <strong>Hops:</strong> Cascade, Chinook, Summit, El Dorado and Simcoe<br />
-                <strong>ABV:</strong> 5%
-              </p>
+          <div class="products"></div>
+
+          <template id="product">
+            <div class="product">
+              <img src="" alt="" />
+              <h2>name</h2>
+              <p class="description">description</p>
+              <p class="price">price</p>
+              <form class="form" action="" method="post">
+                <label for="quantity">Quantity</label>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value="1"
+                  min="1"
+                  max="10"
+                />
+                <input type="hidden" name="sku" value="" />
+                <button class="button" type="submit">Buy Now</button>
+              </form>
             </div>
-          </div>
+          </template>
 
           <p>For more information about how to stock Wembeerly IPA. Contact Rob or Kevin on <a href="mailto:info@block109.co.uk">info@block109.co.uk</a> or call <a href="tel:07983888437">07983888437</a></p>
           <a href="https://www.portobellobrewing.com/" target="_blank"><img width="240" src="assets/portobello.png" /></a>
@@ -111,4 +119,10 @@
   </body>
 
   <script src="./js/menu.js"></script>
+  
+  <script src="https://js.stripe.com/v3/"></script>
+  <script type="module">
+    import { loadProducts } from './js/load-products.js';
+    loadProducts();
+  </script>
 </html>

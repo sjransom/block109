@@ -1,0 +1,18 @@
+[
+  {
+    "sku": "ITEM001",
+    "name": "Wembeerly IPA x12",
+    "description": "12 bottles",
+    "image": "https://i.imgur.com/w8ejtAFm.jpg",
+    "amount": 2500,
+    "currency": "GBP"
+  },
+  {
+    "sku": "ITEM002",
+    "name": "Wembeerly IPA x24",
+    "description": "24 bottles",
+    "image": "https://i.imgur.com/VoPQcQdm.jpg",
+    "amount": 4500,
+    "currency": "GBP"
+  }
+]
